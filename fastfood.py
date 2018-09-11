@@ -23,6 +23,13 @@ def register():
 
 	else:
 		return jsonify({"message" : "User already registered"})
+#Login if registered
+@app.route('/api/v1/login', methods=['POST'])
+def login():
+	username = request.get_json()['username']
+	password = request.get_json()['password']
+
+	return jsonify({'message' : 'welcome to Fast-Food-Fast'}), 200
 
 #Initalization
 if __name__=="__main__":
