@@ -68,6 +68,7 @@ def make_order():
 	orders[username].append(food)
 	return jsonify({"message" : "Order sent"}), 200
 
+
 @app.route('/api/v1/history', methods=['GET'])
 @check_user
 def history():
@@ -76,14 +77,13 @@ def history():
 	for each in orders[username]:
 		my_history.update({orders[username].index(each) + 1:each})
 	return jsonify(my_history), 200
-	
+
 #Fetch a specific order from placed order
 @app.route('/api/v1/fetch/<int:order_id>', methods=['GET'])
 @check_user
 def fetch(order_id):
 	username =  session.get('username')
 	return jsonify({order_id:orders[username][order_id-1]}), 200
-
 
 #A function that updates the orders and maintains the index position
 def update(old_order, new_order, mlo):
