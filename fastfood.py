@@ -23,6 +23,14 @@ def register():
 
 	else:
 		return jsonify({"message" : "User already registered"})
+
+#Login authorisation
+def log_auth(username, password):
+	if username in user:
+		if password == user[username]['password']:
+			return True
+	return False
+
 #Login if registered
 @app.route('/api/v1/login', methods=['POST'])
 def login():
