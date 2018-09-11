@@ -67,6 +67,16 @@ def make_order():
 	orders[username].append(food)
 	return jsonify({"message" : "Order sent"}), 200
 
+#History of order
+@app.route('/api/v1/history', methods=['GET'])
+@check_user
+def history():
+	username = session.get('username')
+	my_history = {}
+	for each in orders[username]:
+		my_history.update({orders[username].index(each) + 1:each})
+	return jsonify(my_history), 200
+	
 #Initalization
 if __name__=="__main__":
 	app.run(debug = True)
