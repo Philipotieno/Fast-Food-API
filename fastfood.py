@@ -33,7 +33,7 @@ def log_auth(username, password):
 
 #check if user is in session
 def check_user(func):
-	@wraps(func)
+	@wrap(func)
 	def wrap(*args, **kwargs):
 		if session["check_user"]:
 			return func(*args, **kwargs)
