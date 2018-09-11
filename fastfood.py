@@ -82,7 +82,17 @@ def update(old_order, new_order, mlo):
 			index = mlo.index(i)
 			del mlo[index]
 			mlo.insert(index, new_order)
-			
+
+#Update an existing food order	
+@app.route('/api/v1/update_order/<int:order_id>', methods=['PUT'])
+@check_user
+def update_order(order_id):
+	food = request.get_json()['food']
+	username = session.get('username')
+	old_order = orders[username][order_id-1]
+	update(old_order, food, orders[username])
+	return jsonify({'message' : 'order updated successfully'}), 200
+
 #Initalization
 if __name__=="__main__":
 	app.run(debug = True)
