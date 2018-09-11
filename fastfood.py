@@ -68,7 +68,7 @@ def make_order():
 	orders[username].append(food)
 	return jsonify({"message" : "Order sent"}), 200
 
-#History of order
+
 @app.route('/api/v1/history', methods=['GET'])
 @check_user
 def history():
@@ -103,6 +103,14 @@ def update_order(order_id):
 	update(old_order, food, orders[username])
 	return jsonify({'message' : 'order updated successfully'}), 200
 
+#delete specific order by id
+@app.route('/api/v1/delete_order/<int:order_id>', methods=['DELETE'])
+@check_user
+def delete_order(order_id):
+	username = session.get('username')
+	del orders[username][order_id]
+	return jsonify({'message' : 'successfully deleted order'}), 200
+
 #Initalization
 if __name__=="__main__":
-	app.run(debug = True)
+	app.run(debug = True, port=5001)
