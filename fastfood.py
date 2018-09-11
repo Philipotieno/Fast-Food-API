@@ -9,7 +9,20 @@ app.config['SECRET_KEY'] = "philipotieno"
 def home():
 	return jsonify({'message' : 'welcome to Fast-Food-Fast'}), 200
 
+#Register new user
+@app.route('/api/v1/register', methods=['POST'])
+def register():
+	name = request.get_json()['name']
+	username = request.get_json()['username']
+	email = request.get_json()['email']
+	password = request.get_json()['password']
 
+	if username not in user:
+		user.update({username:{"name":name, "email":email, "password":password}})
+		return jsonify(user), 200
+
+	else:
+		return jsonify({"message" : "User already registered"})
 
 #Initalization
 if __name__=="__main__":
