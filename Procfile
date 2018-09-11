@@ -1,1 +1,1 @@
-web: gunicorn fastfood:app
+web: python fastfood:app
