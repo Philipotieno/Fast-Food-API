@@ -9,3 +9,6 @@ install:
 
 scripts:
   -pytest test_fastfood.py
+
+
+after_success: coveralls
