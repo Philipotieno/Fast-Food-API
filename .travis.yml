@@ -9,8 +9,6 @@ install:
   - pip install pytest-cov
   - pip install coveralls
 
-before_script:
-  - test_fastfood.py
 
 scripts:
   - python test_fastfood.py
