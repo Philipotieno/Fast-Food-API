@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Philipotieno/Fast-Food-API.svg?branch=develop)](https://travis-ci.org/Philipotieno/Fast-Food-API)
 
+[![Coverage Status](https://coveralls.io/repos/github/Philipotieno/Fast-Food-API/badge.svg)](https://coveralls.io/github/Philipotieno/Fast-Food-API)
 
 Fast-Food-Fast is a food delivery service app for a restaurant
 
