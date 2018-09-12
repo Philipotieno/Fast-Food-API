@@ -1,4 +1,4 @@
-#### Fast-Food-Fast
+## Fast-Food-Fast
 
 [![Build Status](https://travis-ci.org/Philipotieno/Fast-Food-API.svg?branch=heroku)](https://travis-ci.org/Philipotieno/Fast-Food-API)
 
