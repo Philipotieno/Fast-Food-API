@@ -10,7 +10,7 @@ install:
   - pip install coveralls
 
 
-scripts:
+script:
   - python test_fastfood.py
   - pytest --cov=.
   - pytest
