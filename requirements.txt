@@ -1,8 +1,12 @@
 atomicwrites==1.2.1
 attrs==18.2.0
+certifi==2018.8.24
+chardet==3.0.4
 click==6.7
+coverage==4.5.1
 Flask==1.0.2
 gunicorn==19.9.0
+idna==2.7
 itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
@@ -10,5 +14,10 @@ more-itertools==4.3.0
 pluggy==0.7.1
 py==1.6.0
 pytest==3.8.0
+pytest-cov==2.6.0
+python-coveralls==2.9.1
+PyYAML==3.13
+requests==2.19.1
 six==1.11.0
+urllib3==1.23
 Werkzeug==0.14.1

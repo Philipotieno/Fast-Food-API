@@ -1,11 +1,20 @@
 language: python
 
 python:
-  -'3.4'
-  -'3.6'
+  - '3.4'
+  - '3.6'
 
 install:
-  -pip install -r requirements.txt
+  - pip install -r requirements.txt
+  - pip install pytest-cov
+  - pip install coveralls
 
-scripts:
-  -pytest test_fastfood.py
+
+script:
+  - python test_fastfood.py
+  - pytest --cov=.
+  - pytest
+
+
+after_success:
+  - coveralls
