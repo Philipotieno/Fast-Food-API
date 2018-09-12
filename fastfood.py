@@ -117,4 +117,4 @@ def delete_order(order_id):
 
 #Initalization
 if __name__ == "__main__":
-    app.run(debug=True, port=5021)
+    app.run(debug=True, port=5003)
