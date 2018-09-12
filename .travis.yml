@@ -5,10 +5,13 @@ python:
   -'3.6'
 
 install:
-  -pip install -r requirements.txt
+  - pip install -r requirements.txt
+  - pip install python-coveralls
+  - pip install coverage
 
 scripts:
-  -pytest test_fastfood.py
+  - pytest test_fastfood.py
 
 
-after_success: coveralls
+after_success:
+  - coveralls
