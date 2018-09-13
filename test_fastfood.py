@@ -6,12 +6,12 @@ class Test_fastfood(unittest.TestCase):
 
     def test_home(self):
     	with app.test_client() as p:
-    		response = p.get('/api/v1/',)
+    		response = p.get('/',)
     		self.assertEqual(response.status_code, 200)
 
 
     def test_wrongmethod(self):
-    	self.assertEqual(app.test_client().post('/api/v1/').status_code, 405)
+    	self.assertEqual(app.test_client().post('/').status_code, 405)
 
 
     def test_register(self):
