@@ -11,7 +11,7 @@ install:
 
 
 script:
-  - python test_fastfood.py
+  - python test_fast_food.py
   - pytest --cov=.
   - pytest
 
