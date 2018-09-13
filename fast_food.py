@@ -27,7 +27,7 @@ def register():
 
     if username not in USER:
         USER.update({username:{"name":name, "email":email, "password":password}})
-        return jsonify(USER), 200
+        return jsonify({"message" : "successfully registered"}), 200
     return jsonify({"message" : "User already registered"})
 
 #Login authorisation
