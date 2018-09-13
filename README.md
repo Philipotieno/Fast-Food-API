@@ -63,7 +63,7 @@ Install the requirements of the project:
 
 Run the application:
 
-  $ python run.py
+  $ python fastfood.py
 
 Test the endpoints in postman
 
