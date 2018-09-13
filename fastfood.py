@@ -13,7 +13,7 @@ USER = {}
 ORDERS = {}
 
 
-@app.route('/api/v1/', methods=['GET'])
+@app.route('/', methods=['GET'])
 def home():
     return jsonify({'message' : 'welcome to Fast-Food-Fast'}), 200
 
@@ -117,4 +117,4 @@ def delete_order(order_id):
 
 #Initalization
 if __name__ == "__main__":
-    app.run(debug=True, port=5003)
+    app.run(debug=True)
