@@ -1,7 +1,7 @@
 ''' Write test for status codes for variouse endpoints'''
 
 import unittest
-from fast_food import *
+from fastfood import *
 
 class TestFastFood(unittest.TestCase):
     def test_home(self):
